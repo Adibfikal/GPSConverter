@@ -85,6 +85,17 @@ pre {
     margin-bottom: 15px;
 }
 
+pre a {
+    color: #3498db;
+    text-decoration: none;
+    word-break: break-all;
+}
+
+pre a:hover {
+    text-decoration: underline;
+    color: #2980b9;
+}
+
 #mapLinkContainer a {
     display: inline-block;
     background-color: #2ecc71;
