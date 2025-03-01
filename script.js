@@ -49,21 +49,20 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function displayResult(data) {
-        // Format the result text
-        const resultString = `Latitude: ${data.latitude}
-Longitude: ${data.longitude}
-${data.speed !== null ? `Speed: ${data.speed} km/h` : ''}
-lat, long: ${data.latitude}, ${data.longitude}`;
-        
-        resultText.textContent = resultString;
-        
         // Create Google Maps URL
         const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${data.latitude},${data.longitude}`;
         
-        // Add the URL to the result
-        resultText.textContent += `\nGoogle Maps URL: ${mapsUrl}`;
+        // Format the result text with HTML
+        const resultHTML = `Latitude: ${data.latitude}
+Longitude: ${data.longitude}
+${data.speed !== null ? `Speed: ${data.speed} km/h` : ''}
+lat, long: ${data.latitude}, ${data.longitude}
+Google Maps URL: <a href="${mapsUrl}" target="_blank">${mapsUrl}</a>`;
         
-        // Create a clickable link
+        // Use innerHTML instead of textContent to render the HTML
+        resultText.innerHTML = resultHTML;
+        
+        // Create a clickable button
         mapLinkContainer.innerHTML = `<a href="${mapsUrl}" target="_blank">Open in Google Maps</a>`;
     }
 }); 
