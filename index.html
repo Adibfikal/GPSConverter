@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPS Coordinate Converter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>GPS Coordinate Converter</h1>
+        
+        <div class="input-section">
+            <label for="gpsInput">Enter GPS Data:</label>
+            <textarea id="gpsInput" placeholder="Current position! Lat:S0.958017,Lon:E100.398209,Course:126.34,Speed:5.67Km/h,DateTime:2025-03-01 23:26:06"></textarea>
+            <button id="convertBtn">Convert</button>
+        </div>
+        
+        <div class="result-section" id="resultSection">
+            <h2>Results</h2>
+            <pre id="resultText"></pre>
+            <div id="mapLinkContainer"></div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html> 
